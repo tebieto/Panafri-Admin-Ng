@@ -8,8 +8,8 @@ import { DashboardPage } from './dashboard.page';
 import { ProductsPage } from '../products/products.page';
 import { NewProductsPage } from '../products/new-products/new-products.page';
 import { EditProductPage } from '../products/edit-product/edit-product.page';
-import { ShopInfoPage} from '../signup/shop-info/shop-info.page';
-import { EditShopPage} from '../signup/edit-shop/edit-shop.page';
+import { CategoryInfoPage} from '../signup/category-info/category-info.page';
+import { EditCategoryPage} from '../signup/edit-category/edit-category.page';
 import { ChangePasswordPage} from '../signup/change-password/change-password.page';
 import { EditProfilePage} from '../signup/edit-profile/edit-profile.page';
 import { NewServicesPage } from '../services/new-services/new-services.page';
@@ -17,7 +17,7 @@ import { EditServicePage } from '../services/edit-service/edit-service.page';
 import { ProductViewPage } from '../products/product-view/product-view.page';
 import { ReviewsPage } from '../reviews/reviews.page';
 import { RequestsPage } from '../requests/requests.page';
-import { StoresPage } from '../stores/stores.page';
+import { CategoriesPage } from '../categories/categories.page';
 import { SettingsPage } from '../settings/settings.page';
 import { ServicesPage } from '../services/services.page';
 
@@ -66,12 +66,12 @@ const routes: Routes = [
         component: ChangePasswordPage
       },
       {
-        path: 'stores/new',
-        component: ShopInfoPage
+        path: 'category/new',
+        component: CategoryInfoPage
       },
       {
-        path: 'stores/edit',
-        component: EditShopPage
+        path: 'categories/edit',
+        component: EditCategoryPage
       },
       {
         path: 'reviews',
@@ -82,8 +82,8 @@ const routes: Routes = [
         component: RequestsPage
       },
       {
-        path: 'stores',
-        component: StoresPage
+        path: 'categories',
+        component: CategoriesPage
       },
       {
         path: 'settings',
@@ -112,14 +112,14 @@ const routes: Routes = [
     EditProductPage,
     EditProfilePage,
     ChangePasswordPage,
-    EditShopPage,
+    EditCategoryPage,
     EditServicePage,
     NewServicesPage,
-    ShopInfoPage,
+    CategoryInfoPage,
     ProductViewPage,
     ReviewsPage,
     RequestsPage,
-    StoresPage,
+    CategoriesPage,
     SettingsPage,
     ServicesPage
   ]

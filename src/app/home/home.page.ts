@@ -77,8 +77,10 @@ export class HomePage implements OnInit {
             products: result.products,
             services: result.services,
             requests: result.requests,
-            customers: result.customers,
-            earnings: result.earnings,
+            users: result.users,
+            partners: result.partners,
+            stores: result.stores,
+            categories: result.categories,
             reviews: result.reviews  
           }
 
@@ -88,8 +90,10 @@ export class HomePage implements OnInit {
           this.storage.set('products', param.products);
           this.storage.set('services', param.services);
           this.storage.set('requests', param.requests);
-          this.storage.set('customers', param.customers);
-          this.storage.set('earnings', param.earnings);
+          this.storage.set('categories', param.categories);
+          this.storage.set('partners', param.partners);
+          this.storage.set('users', param.users);
+          this.storage.set('stores', param.stores);
           this.storage.set('deviceToken', this.DeviceToken);
 
           this.router.navigate(["dashboard"], { queryParams: param });

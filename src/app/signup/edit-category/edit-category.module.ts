@@ -3,15 +3,15 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ShopInfoPage } from './shop-info.page';
+import { EditCategoryPage } from './edit-category.page';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: ShopInfoPage }])
+    RouterModule.forChild([{ path: '', component: EditCategoryPage }])
   ],
-  declarations: [ShopInfoPage]
+  declarations: [EditCategoryPage]
 })
-export class ShopInfoPageModule {}
+export class EditCategoryPageModule {}

@@ -19,18 +19,18 @@
     <ion-col size="6">
       <ion-card>
         <ion-item>
-          <ion-label>Earnings</ion-label>
+          <ion-label> All Categories</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
-          <ion-card-title> &#8358;{{earnings}}</ion-card-title>
+          <ion-card-title>{{categories}}</ion-card-title>
         </ion-card-header>
       </ion-card>
     </ion-col>
     <ion-col>
       <ion-card>
         <ion-item>
-          <ion-label>Products</ion-label>
+          <ion-label>All Products</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
@@ -44,7 +44,7 @@
     <ion-col>
       <ion-card>
         <ion-item>
-          <ion-label>Requests</ion-label>
+          <ion-label>All Requests</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
@@ -55,7 +55,7 @@
     <ion-col>
       <ion-card>
         <ion-item>
-          <ion-label>Services</ion-label>
+          <ion-label>All Services</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
@@ -69,7 +69,7 @@
     <ion-col>
       <ion-card>
         <ion-item>
-          <ion-label>Reviews</ion-label>
+          <ion-label>All Reviews</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
@@ -80,11 +80,36 @@
     <ion-col>
       <ion-card>
         <ion-item>
-          <ion-label>Customers</ion-label>
+          <ion-label>All Partners</ion-label>
           <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
         </ion-item>
         <ion-card-header>
-          <ion-card-title>{{customers}}</ion-card-title>
+          <ion-card-title>{{partners}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card>
+        <ion-item>
+          <ion-label>All Stores</ion-label>
+          <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
+        </ion-item>
+        <ion-card-header>
+          <ion-card-title>{{stores}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+
+
+    <ion-col>
+      <ion-card>
+        <ion-item>
+          <ion-label>All Users</ion-label>
+          <ion-icon slot="icon-only" slot="end" name="more" (click)="presentPopover()"></ion-icon>
+        </ion-item>
+        <ion-card-header>
+          <ion-card-title>{{users}}</ion-card-title>
         </ion-card-header>
       </ion-card>
     </ion-col>
@@ -96,18 +121,10 @@
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-        <span class="fab-label">Add Store</span>
-        <ion-fab-button (click)="goToNewStore()">
+        <span class="fab-label">Add Category</span>
+        <ion-fab-button (click)="goToNewCategory()">
           <ion-icon name="basket"></ion-icon>
         </ion-fab-button>
-      <span class="fab-label">Add Product</span>
-      <ion-fab-button (click)="goToNewProduct()">
-        <ion-icon name="basket"></ion-icon>
-      </ion-fab-button>
-      <span class="fab-label">Add Services</span>
-      <ion-fab-button (click)="goToNewService()">
-        <ion-icon name="book"></ion-icon>
-      </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
 </ion-content>

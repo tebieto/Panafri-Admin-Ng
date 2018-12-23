@@ -3,32 +3,26 @@ import { Http, Headers, Response, RequestOptions } from "@angular/http";
 import { Observable } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";
 
-import { Store } from "./store.model";
+import { Category } from "./category.model";
 import { Config } from "../config";
 
 @Injectable()
-export class StoreService {
+export class CategoryService {
     constructor(private http: Http) { }
     token= ""
-    store(store: Store) {
-        console.log(store)
-         this.token = "Bearer" + store.token
+    category(category: Category) {
+        console.log(category)
+         this.token = "Bearer" + category.token
 
         let headers = new Headers({ "Authorization": this.token });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
-            Config.apiUrl + "store",
+            Config.apiUrl + "category",
             JSON.stringify({
 
-                name: store.name,
-                image: store.image,
-                description: store.description,
-                email: store.email,
-                phone:store.phone,
-                address: store.address,
-                state:store.state,
-                landmark:store.landmark,
-                identity:store.identity
+                name: category.name,
+                image: category.image,
+                type: category.type,
             }),
             { headers: this.getCommonHeaders() }
         ).pipe(
@@ -40,25 +34,19 @@ export class StoreService {
         );
     }
 
-    edit(store: Store) {
-        console.log(store)
-         this.token = "Bearer" + store.token
+    edit(category: Category) {
+        console.log(category)
+         this.token = "Bearer" + category.token
 
         let headers = new Headers({ "Authorization": this.token });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
-            Config.apiUrl + "edit/store",
+            Config.apiUrl + "edit/category",
             JSON.stringify({
-                id: store.id,
-                name: store.name,
-                image: store.image,
-                description: store.description,
-                email: store.email,
-                phone:store.phone,
-                address: store.address,
-                state:store.state,
-                landmark:store.landmark,
-                identity:store.identity
+                id: category.id,
+                name: category.name,
+                image: category.image,
+                type: category.type,
             }),
             { headers: this.getCommonHeaders() }
         ).pipe(
@@ -70,16 +58,16 @@ export class StoreService {
         );
     }
 
-    delete(store: Store) {
-        console.log(store)
-         this.token = "Bearer" + store.token
+    delete(category: Category) {
+        console.log(category)
+         this.token = "Bearer" + category.token
 
         let headers = new Headers({ "Authorization": this.token });
         let options = new RequestOptions({ headers: headers });
         return this.http.post(
-            Config.apiUrl + "delete/store",
+            Config.apiUrl + "delete/category",
             JSON.stringify({
-                id: store.id,
+                id: category.id,
             }),
             { headers: this.getCommonHeaders() }
         ).pipe(

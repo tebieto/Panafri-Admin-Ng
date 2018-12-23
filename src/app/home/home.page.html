@@ -1,7 +1,7 @@
 <ion-content padding class="flex-container">
   <div text-center class="logo-holder">
     <img src="/assets/img/logo.jpeg" alt="">
-    <p>Panafri Partner</p>
+    <p>Panafri Admin</p>
   </div>
   <ion-item>
     <ion-label>
@@ -18,8 +18,5 @@
   </ion-item>
   <div text-center class="action">
     <ion-button color="danger" (click)="Login()">SIGN IN</ion-button>
-    <p>Don't have an account? <b><a [routerLink]="['/register', 'signup', { outlets: { personal: ['personal'] } }]">Sign
-          up!</a></b></p>
-    <p><a [routerLink]="['/register', 'signup', { outlets: { personal: ['personal'] } }]">Forgot password?</a></p>
   </div>
 </ion-content>

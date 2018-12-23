@@ -53,9 +53,9 @@
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle>
-            <ion-item routerLink="/dashboard/stores" [routerDirection]="'root'">
+            <ion-item routerLink="/dashboard/categories" [routerDirection]="'root'">
               <ion-icon name="home"></ion-icon>
-              <ion-label>Manage Stores</ion-label>
+              <ion-label>Manage Categories</ion-label>
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle>
@@ -78,12 +78,7 @@
           </ion-menu-toggle>
           </ion-list>
         </ion-content>
-        <ion-footer>
-          <ion-item>
-            <ion-toggle color="danger" [(ngModel)]="user.status" (ngModelChange)="updateStatus()"></ion-toggle>
-            <ion-label>On duty?</ion-label>
-          </ion-item>
-        </ion-footer>
+        
       </ion-menu>
 
        

@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Edit Category</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon slot="icon-only" name="notifications"></ion-icon>
+        </ion-button>
+        <ion-button (click)="toggleSearch()">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon slot="icon-only" name="more"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="saveCategory()">
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="home"></ion-icon>
+        </ion-label>
+        <ion-input clearInput type="text" placeholder="Preferred Category Name" name="name" [(ngModel)]="category.name"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="information"></ion-icon>
+          </ion-label>
+          <ion-input clearInput type ="text" placeholder="Fontawesome Icon Code" name="image" [(ngModel)]="category.image"></ion-input>
+        </ion-item>
+      </ion-list>
+   
+    <ion-list>
+      <ion-item>
+        <ion-label>Category Type</ion-label>
+        <ion-select name="category" [(ngModel)]="category.type">
+          <ion-select-option value="1">Product</ion-select-option>
+          <ion-select-option value="2">Service</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" type="submit" color="danger">Update</ion-button>
+  </form>
+</ion-content>

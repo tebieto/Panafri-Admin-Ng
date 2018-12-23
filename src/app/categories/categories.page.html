@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Manage Stores</ion-title>
+      <ion-title>Manage Categories</ion-title>
       <ion-buttons slot="end">
         <ion-button>
           <ion-icon slot="icon-only" name="notifications"></ion-icon>
@@ -20,12 +20,10 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let item of storeList" (click)="goToStore(item.id)">
-    <ion-img src="{{item.image}}"></ion-img>
+  <ion-card *ngFor="let item of categoryList" (click)="goToCategory(item.id)">
     <ion-card-content>
         <h2>{{item.name}}</h2>
-      <p>{{item.description}}</p>
-      <ion-card-subtitle>{{item.location}}</ion-card-subtitle>
+      <p>{{categoryType(item.type)}}</p>
     </ion-card-content>
   </ion-card>
 

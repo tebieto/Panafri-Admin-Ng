@@ -53,6 +53,7 @@
     "cordova-sqlite-storage": "2.5.2",
     "core-js": "^2.6.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
+    "font-awesome": "^4.7.0",
     "ionic-angular": "^3.9.2",
     "rxjs": "6.2.2",
     "zone.js": "^0.8.26"

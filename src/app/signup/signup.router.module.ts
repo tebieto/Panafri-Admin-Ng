@@ -51,7 +51,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SignupPage } from './signup.page';
-import { ShopInfoPage } from './shop-info/shop-info.page';
+import { CategoryInfoPage } from './category-info/category-info.page';
 import { PersonalInfoPage } from './personal-info/personal-info.page';
 
 const routes: Routes = [
@@ -70,9 +70,9 @@ const routes: Routes = [
         component: PersonalInfoPage
       },
       {
-        path: 'shop',
-        outlet: 'shop',
-        component: ShopInfoPage
+        path: 'category',
+        outlet: 'category',
+        component: CategoryInfoPage
       }
     ]
   },

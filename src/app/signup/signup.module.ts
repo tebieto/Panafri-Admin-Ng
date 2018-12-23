@@ -8,7 +8,7 @@ import { SignupPageRoutingModule } from './signup.router.module';
 
 import { SignupPage } from './signup.page';
 import { PersonalInfoPageModule } from '../signup/personal-info/personal-info.module';
-import { ShopInfoPageModule } from '../signup/shop-info/shop-info.module';
+import { CategoryInfoPageModule } from '../signup/category-info/category-info.module';
 import { HomePageModule } from '../home/home.module';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { HomePageModule } from '../home/home.module';
     SignupPageRoutingModule,
     HomePageModule,
     PersonalInfoPageModule,
-    ShopInfoPageModule
+    CategoryInfoPageModule
   ],
   declarations: [SignupPage]
 })

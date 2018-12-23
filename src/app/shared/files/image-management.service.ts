@@ -8,7 +8,7 @@ import { Config } from "../config";
 
 @Injectable()
 export class ImageManagementService {
-  private readonly baseUrl = Config.apiUrl + "save/image";
+  private readonly baseUrl = Config.partnerUrl + "save/image";
   private cameraOptions: CameraOptions = {
     quality: 100,
     destinationType: this.camera.DestinationType.FILE_URI,

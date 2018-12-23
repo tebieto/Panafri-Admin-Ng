@@ -15,8 +15,10 @@ export class HomePage implements OnInit {
   products=""
   services=""
   requests=""
-  customers=""
-  earnings=""
+  partners=""
+  users=""
+  categories=""
+  stores=""
   reviews=""
   constructor(
     public popoverController: PopoverController,
@@ -42,14 +44,24 @@ export class HomePage implements OnInit {
         this.services = val
       });
       
-      this.storage.get('earnings').then((val) => {
+      this.storage.get('stores').then((val) => {
         
-        this.earnings = val
+        this.stores = val
       });
 
-      this.storage.get('customers').then((val) => {
+      this.storage.get('users').then((val) => {
         
-        this.customers = val
+        this.users = val
+      });
+
+      this.storage.get('categories').then((val) => {
+        
+        this.categories = val
+      });
+
+      this.storage.get('partners').then((val) => {
+        
+        this.partners = val
       });
 
       this.storage.get('requests').then((val) => {
@@ -72,15 +84,8 @@ export class HomePage implements OnInit {
     return await popover.present();
   }
 
-
-  goToNewProduct() {
-    this.router.navigateByUrl('dashboard/products/new');
-  }
-  goToNewService() {
-    this.router.navigateByUrl('dashboard/services/new');
-  }
-  goToNewStore() {
-    this.router.navigateByUrl('dashboard/stores/new');
+  goToNewCategory() {
+    this.router.navigateByUrl('dashboard/category/new');
   }
 
 }
