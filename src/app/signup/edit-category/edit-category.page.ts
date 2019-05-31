@@ -49,7 +49,10 @@ export class EditCategoryPage implements OnInit{
     this.categoryService.edit(this.category)
       .subscribe(
         (result) => {
-          console.log(result)
+          if(result.success) {
+            alert("Category updated succcessfully.")
+            return
+          }
 
          
       },

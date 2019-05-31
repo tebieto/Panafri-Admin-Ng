@@ -38,11 +38,14 @@ export class CategoryInfoPage implements OnInit{
   
 
   saveCategory() {
+   
     this.categoryService.category(this.category)
       .subscribe(
         (result) => {
-          alert(result.success)
 
+          alert(result.success)
+          this.router.navigate(['dashboard', 'categories']);
+          return  
          
       },
         (error) => {

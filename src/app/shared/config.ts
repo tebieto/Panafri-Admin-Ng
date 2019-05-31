@@ -1,8 +1,8 @@
 
 export class Config {
-    static apiUrl = "https://panafri.com/api/admin/";
-    static appUrl = "https://panafri.com/api/app/";
-    static partnerUrl = "https://panafri.com/api/partner/";
+    static apiUrl = "http://panafri.com/api/admin/";
+    static appUrl = "http://panafri.com/api/app/";
+    static partnerUrl = "http://panafri.com/api/partner/";
     static fcmUrl = "https://fcm.googleapis.com/fcm/send";
     static appKey = "";
     static authHeader = "";

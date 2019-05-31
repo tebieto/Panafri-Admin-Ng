@@ -32,6 +32,12 @@ export class ReviewsPage implements OnInit {
      
       this.ReviewsService.load(this.params)
         .subscribe(loadedReviews => {
+
+          if(loadedReviews.length<1){
+            alert("No reviews at the moment")
+            return
+          }
+
           loadedReviews.forEach((reviewObject) => {
             this.reviewList.unshift(reviewObject);
             

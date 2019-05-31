@@ -43,11 +43,23 @@ export class ChangePasswordPage implements OnInit {
     this.signupService.change(this.user)
     .subscribe(
       (result) => {
-        console.log("result:" +result)
+        if(result.sucess){
+          alert("Password changed sucessfullyy.")
+        }
         this.logout()
+
+        return
        
     },
-      (error) => alert("Unfortunately we could not create your account.")
+      (error) => {
+        console.log(error)
+        if(error.status==400) {
+          alert("Password is empty or they do not match")
+          return
+        }
+        alert("Unfortunately we could not connect to the server.")
+
+      }
     );
       
   }

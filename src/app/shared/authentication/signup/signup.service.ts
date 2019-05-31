@@ -71,7 +71,6 @@ export class SignupService {
             { headers: this.getCommonHeaders() }
         ).pipe(
             map(response => response.json()),
-            catchError(this.handleErrors)
         );
     }
 

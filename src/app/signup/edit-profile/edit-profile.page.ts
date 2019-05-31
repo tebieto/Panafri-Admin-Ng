@@ -102,7 +102,9 @@ export class EditProfilePage implements OnInit {
     this.signupService.edit(this.user)
     .subscribe(
       (result) => {
-        console.log(result)
+        if(result.success){
+          alert("Profile updated successfully.")
+        }
     },
       (error) => alert("Unfortunately we could not create your account.")
     );

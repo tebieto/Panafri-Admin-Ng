@@ -30,7 +30,10 @@ export class ServicesPage implements OnInit {
 
     this.ServicesService.load(this.token)
       .subscribe(loadedServices => {
-        console.log(loadedServices)
+        if(loadedServices.length<1){
+          alert("No service at the moment")
+          return
+        }
         loadedServices.forEach((serviceObject) => {
           this.serviceList.unshift(serviceObject);
         });

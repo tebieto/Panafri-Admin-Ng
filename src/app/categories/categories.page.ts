@@ -29,6 +29,10 @@ export class CategoriesPage implements OnInit {
      
       this.CategoriesService.load()
         .subscribe(loadedCategories => {
+          if(loadedCategories.length<1){
+            alert("No Category at the moment")
+            return
+          }
           loadedCategories.forEach((categoryObject) => {
             this.categoryList.unshift(categoryObject);
           });

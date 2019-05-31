@@ -34,8 +34,6 @@ export class HomePage implements OnInit {
     ) {
 
     this.user = new Login();
-    this.user.email = "tebieto@gmail.com";
-    this.user.password = "1223454allu4";
     
   
   }
@@ -98,7 +96,17 @@ export class HomePage implements OnInit {
 
           this.router.navigate(["dashboard"], { queryParams: param });
       },
-        (error) => alert("Unfortunately we could not find your account.")
+        (error) => {
+          if(error.status==400){
+            alert("Invalid credentials.")
+            return
+          }
+          if(error.status==401){
+            alert("This account is unauthorised.")
+            return
+          }
+          alert("Unfortunately we could not connect to the server at the moment.")
+        }
       );
       
   }
